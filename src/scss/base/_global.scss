@@ -1,0 +1,20 @@
+//----------------------------------------------------
+// Base: Global
+//----------------------------------------------------
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  > header,
+  > footer {
+    flex: none;
+  }
+  > main {
+    flex: 1 0 auto;
+  }
+}

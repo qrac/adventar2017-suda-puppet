@@ -1,0 +1,21 @@
+//----------------------------------------------------
+// Layout: Grid
+//----------------------------------------------------
+
+@each $gap-x in 2, 4, 6 {
+  .grid.is-gap-#{$gap-x}x:not(.is-gap-none) {
+    margin-left: $gap-x / -2 + em;
+    margin-bottom: $gap-x / -2 + em;
+    > .col {
+      padding-left: $gap-x / 2 + em;
+      padding-bottom: $gap-x / 2 + em;
+    }
+    + .grid.is-gap-#{$gap-x}x:not(.is-gap-none) {
+      margin-top: $gap-x / 2 + em;
+    }
+  }
+}
+
+.grid.is-stretch > .col > .card {
+  width: 100%;
+}
