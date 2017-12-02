@@ -18,3 +18,13 @@ body {
     flex: 1 0 auto;
   }
 }
+
+body {
+  position: relative;
+  background-color: $black;
+  font-family: $font-sans-yakuhanjps;
+}
+
+button {
+  outline: none;
+}

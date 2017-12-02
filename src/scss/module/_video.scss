@@ -1,0 +1,13 @@
+//----------------------------------------------------
+// Module: Video
+//----------------------------------------------------
+
+.video.is-suda {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: auto;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+}

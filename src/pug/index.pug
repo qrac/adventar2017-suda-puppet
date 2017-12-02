@@ -12,17 +12,44 @@ block vars
 block contents
 
   header.section.is-header
-    .inner
-      .grid.is-between.is-middle
-        .col
-          h1 #{page.title}
-        .col
+    h1.heading.is-font-title.is-light.is-center #{page.title}
 
   section.section.is-topcover
     .inner
+      video.video.is-suda#video(width="300" poster="/"+path.img+"/screenshot.png" playsinline)
+        source(src="/"+path.mov+"/suda-puppet.mp4" type="video/mp4")
+        a(href="/"+path.mov+"/suda-puppet.mp4") 動画を再生
+
+  section.section.is-control
+    input.trick.is-video-btn-trick#video-btn-trick(type="checkbox" checked)
+    .btns.is-center.is-xl
+      label.btn.is-plain.is-circle.is-video-btn#video-btn(for="video-btn-trick")
+        i.fa.fa-pause(aria-hidden="true")
+        i.fa.fa-play(aria-hidden="true")
+    .group
+      p.text.is-light.is-center.is-lg
+        i.fa.fa-hand-o-down(aria-hidden="true")
+        span.text Scroll
 
   main.section.is-main
     .inner
+      .group.is-light
+        p.texts このコンテンツは「スダ Advent Calendar2017」5日目のコンテンツです。フリーランスのデザイナーユニット（夫婦）「クラのこ」のクラク・まいのこが制作しています。
+        p.texts スダさんについてはー...あれだ。渋谷のヒカリエでSVGの勉強会があって、埋め込まれたSVGを抜き出す方法がないのか登壇されている方を問い詰めていましたね。懐かしいです。
+        p.texts 「...あの人が噂のスダさんかー」と妙な納得感を覚えた瞬間。
+        p.texts そんなスダさんのアドベントカレンダーがあると聞き、何かできることはないのだろうかと考えました。
+        p.texts やはり、流行り者には流行り物でお応えせねば！
+        p.texts 今年リリースされた「Adobe Character Animator CC」というツールを使い、音声に連動して動くスダさんを作ることに成功しました。今、スダさんが動いていますよね？そういうことです。
+        p.texts これはパペットと言い、カメラでユーザーの声や動きを認識してスダさんを自由に動かすことができます。iPhone Xの「動かせる絵文字」みたいなやつですね。これを使えば、誰でも簡単にスダさんになりきれるでしょう。
+        p.texts スダさんになりきりたい方はAdobe CCでCharacter Animator CCを入れて、このパペットデータを開いてみてください。それではまた。
+      .groups
+        .btns.is-bar.is-center
+          a.btn.is-plain.is-round.is-success(href="/"+path.dist+"/puppet/suda.puppet" download="musubii.min.css")
+            i.fa.fa-download(aria-hidden="true")
+            span.text Download
+          a.btn.is-plain.is-round.is-plain(href=github.url+"/"+github.id+"/"+github.repo)
+            i.fa.fa-github(aria-hidden="true")
+            span.text Repository
 
   footer.section.is-footer
     .inner
@@ -43,6 +70,6 @@ block contents
               | Author Group:&nbsp;&nbsp;
               i.fa.fa-globe(aria-hidden="true")
               a.text.is-link-reverse(href="https://qranoko.jp" target="_blank") QRANOKO
-      .groups
+      .group
         p.texts.is-light.is-center.is-sm
           span.text &copy; QRANOKO 2017

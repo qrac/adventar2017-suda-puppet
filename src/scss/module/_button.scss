@@ -1,3 +1,49 @@
 //----------------------------------------------------
 // Module: Button
 //----------------------------------------------------
+
+.btn.is-video-btn {
+  position: relative;
+  //border-radius: 1.25em 0 0 1.25em;
+  @include tablet {
+    font-size: 120%;
+  }
+  @include desktop {
+    font-size: 140%;
+  }
+  @include wide {
+    font-size: 150%;
+  }
+  > .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+  }
+  > .fa.fa-pause {
+    transform: translate(-50%, -50%);
+  }
+  > .fa.fa-play {
+    transform: translate(-36%, -50%);
+  }
+}
+
+.trick {
+  display: none;
+}
+
+.trick.is-video-btn-trick:not(:checked) + .btns > .btn.is-video-btn {
+  //background-color: $yellow-500;
+}
+
+.trick.is-video-btn-trick:not(:checked) + .btns > .btn.is-video-btn > .fa.fa-play {
+  display: none;
+}
+
+.trick.is-video-btn-trick:checked + .btns > .btn.is-video-btn {
+  //background-color: $green-500;
+}
+
+.trick.is-video-btn-trick:checked + .btns > .btn.is-video-btn > .fa.fa-pause {
+  display: none;
+}
