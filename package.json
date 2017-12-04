@@ -1,18 +1,17 @@
 {
   "name": "adventar2017-suda-puppet",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Make Suda that responds to the voice and motion.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qrac/adventar2017-suda-puppet.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Qrac",
+    "web": "https://twitter.com/Qrac_JP"
+  },
+  "license": "(MIT)",
   "bugs": {
     "url": "https://github.com/qrac/adventar2017-suda-puppet/issues"
   },
