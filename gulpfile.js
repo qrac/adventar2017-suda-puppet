@@ -5,11 +5,11 @@
 const gulp = require('gulp');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
-const rename = require("gulp-rename");
+const rename = require('gulp-rename');
 const browserSync = require('browser-sync');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
-const sassGlob = require("gulp-sass-glob");
+const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
@@ -44,7 +44,7 @@ const pugOptions = {
 // Pug > HTML
 gulp.task('pug', () => {
   return gulp.src([paths.pug + '**/*.pug', '!' + paths.pug + '**/_*.pug'])
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(pug(pugOptions))
     .pipe(gulp.dest(paths.html));
 });
@@ -53,7 +53,7 @@ gulp.task('pug', () => {
 gulp.task('scss', function () {
   return gulp.src(paths.scss + '**/*.scss')
     .pipe(sassGlob())
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(sass(sassOptions))
     .pipe(autoprefixer(['> 3% in JP', 'ie 11', 'android 4.4', 'last 1 versions']))
     .pipe(gulp.dest(paths.css))
@@ -62,7 +62,7 @@ gulp.task('scss', function () {
 // CSS Minify
 gulp.task('cssmin', function () {
   return gulp.src([paths.css + '**/*.css', '!' + paths.css + '**/*.min.css'])
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.css))
@@ -71,7 +71,7 @@ gulp.task('cssmin', function () {
 // JS Concat & Babel
 gulp.task('jsconcat', function () {
   return gulp.src(paths.src_js + '**/*.js')
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(concat('app.js'))
     .pipe(babel({presets: ['es2015']}))
     .pipe(gulp.dest(paths.js))
@@ -80,7 +80,7 @@ gulp.task('jsconcat', function () {
 // JS Uglify
 gulp.task('jsuglify', function () {
   return gulp.src([paths.js + '**/*.js', '!' + paths.js + '**/*.min.js'])
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.js))
@@ -106,10 +106,10 @@ gulp.task('browser-sync', () => {
       baseDir: paths.html
     }
   });
-  gulp.watch(paths.html + "**/*.html", ['reload']);
-  gulp.watch(paths.css + "**/*.min.css", ['reload']);
-  gulp.watch(paths.js + "**/*.min.js", ['reload']);
-  gulp.watch(paths.img + "*", ['reload']);
+  gulp.watch(paths.html + '**/*.html', ['reload']);
+  gulp.watch(paths.css + '**/*.min.css', ['reload']);
+  gulp.watch(paths.js + '**/*.min.js', ['reload']);
+  gulp.watch(paths.img + '*', ['reload']);
 });
 
 gulp.task('reload', () => {
