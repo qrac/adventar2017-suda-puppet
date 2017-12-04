@@ -16,9 +16,9 @@ block contents
 
   section.section.is-topcover
     .inner
-      video.video.is-suda#video(width="300" poster="/"+path.img+"/screenshot.png" loop playsinline)
-        source(src="/"+path.mov+"/suda-puppet.mp4" type="video/mp4")
-        a(href="/"+path.mov+"/suda-puppet.mp4") 動画を再生
+      video.video.is-suda#video(width="300" poster=path.img+"/screenshot.png" loop playsinline)
+        source(src=path.mov+"/suda-puppet.mp4" type="video/mp4")
+        a(href=path.mov+"/suda-puppet.mp4") 動画を再生
 
   main.section.is-main
     section.section.is-control
@@ -73,7 +73,7 @@ block contents
           span.text スダさんになりきりたい方はAdobe CCでCharacter Animator CCを入れて、このパペットデータを開いてみてください。それではまた。
       .groups
         .btns.is-bar.is-center
-          a.btn.is-plain.is-round.is-success(href="/"+path.dist+"/suda-puppet.zip" download="suda-puppet.zip")
+          a.btn.is-plain.is-round.is-success(href=path.dist+"/suda-puppet.zip" download="suda-puppet.zip")
             i.fa.fa-download(aria-hidden="true")
             span.text Download
           a.btn.is-plain.is-round.is-plain(href=github.url+"/"+github.id+"/"+github.repo)
