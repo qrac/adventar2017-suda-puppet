@@ -45,7 +45,8 @@ block contents
           a.text.is-link(href="https://qranoko.jp") クラのこ
           span.text 」のクラク・まいのこが制作しています。
         p.texts
-          span.text スダさんについてはー...あれだ。渋谷のヒカリエでSVGの勉強会があって、埋め込まれたSVGを抜き出す方法がないのか登壇されている方を問い詰めていましたね。懐かしいです。
+          a.text.is-link(href="https://sudare.xyz/") スダさん
+          span.text についてはー...あれだ。渋谷のヒカリエでSVGの勉強会があって、埋め込まれたSVGを抜き出す方法がないのか登壇されている方を問い詰めていましたね。懐かしいです。
         p.texts
           span.text 「...あの人が噂のスダさんかー」と妙な納得感を覚えた瞬間。
         p.texts
@@ -96,13 +97,14 @@ block contents
             p.text.is-sm.is-light
               | Author:&nbsp;&nbsp;
               i.fa.fa-twitter(aria-hidden="true")
-              a.text.is-link-reverse(href=twitter.url+"/"+twitter.id target="_blank") Qrac
-              | &nbsp;/&nbsp;Mainoko
+              a.text.is-link-reverse(href=twitter.url+"/"+twitter.id) Qrac
+              | &nbsp;/&nbsp;
+              a.text.is-link-reverse(href=twitter.url+"/"+twitter.id_mainoko) Mainoko
           .col
             p.text.is-sm.is-light
               | Author Group:&nbsp;&nbsp;
               i.fa.fa-globe(aria-hidden="true")
-              a.text.is-link-reverse(href="https://qranoko.jp" target="_blank") QRANOKO
+              a.text.is-link-reverse(href="https://qranoko.jp") QRANOKO
       .group
         p.texts.is-light.is-center.is-sm
           span.text &copy; QRANOKO 2017
