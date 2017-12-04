@@ -10,6 +10,9 @@ const sass = require('gulp-sass');
 const sassGlob = require("gulp-sass-glob");
 const autoprefixer = require('gulp-autoprefixer');
 const pug = require('gulp-pug');
+const imagemin = require('gulp-imagemin')
+const pngquant = require('imagemin-pngquant')
+const mozjpeg  = require('imagemin-mozjpeg')
 
 // Setting : Paths
 const paths = {
@@ -17,7 +20,10 @@ const paths = {
   'html': './docs/',
   'scss': './src/scss/',
   'css': './docs/asset/css/',
-  'js': './docs/asset/js/'
+  'js': './src/js/',
+  'jsmin': './docs/asset/js/',
+  'img': './src/img/',
+  'imgmin': './docs/asset/img/'
 }
 
 // Setting : Sass Options
@@ -48,7 +54,20 @@ gulp.task('scss', function () {
     .pipe(gulp.dest(paths.css))
 });
 
-//Browser Sync
+// Image
+gulp.task('imagemin', () => {
+  return gulp.src(paths.img + '*')
+    .pipe(imagemin([
+      pngquant({ quality: 100, speed: 3 }),
+      mozjpeg({ quality: 80 }),
+      imagemin.svgo(),
+      imagemin.gifsicle()
+    ]))
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.imgmin))
+})
+
+// Browser Sync
 gulp.task('browser-sync', () => {
   browserSync({
     server: {
@@ -64,10 +83,11 @@ gulp.task('reload', () => {
   browserSync.reload();
 });
 
-//watch
+// Watch
 gulp.task('watch', function () {
   gulp.watch(paths.scss + '**/*.scss', ['scss']);
   gulp.watch([paths.pug + '**/*.pug', '!' + paths.pug + '**/_*.pug'], ['pug']);
+  gulp.watch(paths.img + '*', ['imagemin']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

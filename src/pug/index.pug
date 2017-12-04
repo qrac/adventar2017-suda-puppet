@@ -16,32 +16,60 @@ block contents
 
   section.section.is-topcover
     .inner
-      video.video.is-suda#video(width="300" poster="/"+path.img+"/screenshot.png" playsinline)
+      video.video.is-suda#video(width="300" poster="/"+path.img+"/screenshot.png" loop playsinline)
         source(src="/"+path.mov+"/suda-puppet.mp4" type="video/mp4")
         a(href="/"+path.mov+"/suda-puppet.mp4") 動画を再生
 
-  section.section.is-control
-    input.trick.is-video-btn-trick#video-btn-trick(type="checkbox" checked)
-    .btns.is-center.is-xl
-      label.btn.is-plain.is-circle.is-video-btn#video-btn(for="video-btn-trick")
-        i.fa.fa-pause(aria-hidden="true")
-        i.fa.fa-play(aria-hidden="true")
-    .group
-      p.text.is-light.is-center.is-lg
-        i.fa.fa-hand-o-down(aria-hidden="true")
-        span.text Scroll
-
   main.section.is-main
+    section.section.is-control
+      input.trick.is-video-btn-trick#video-btn-trick(type="checkbox" checked)
+      .btns.is-center.is-xl
+        label.btn.is-plain.is-danger.is-circle.is-video-btn#video-btn(for="video-btn-trick")
+          i.fa.fa-pause(aria-hidden="true")
+          i.fa.fa-play(aria-hidden="true")
+      .group
+        p.text.is-light.is-center
+          i.fa.fa-hand-o-up(aria-hidden="true")
+          span.text Play or Scroll
+          i.fa.fa-hand-o-down(aria-hidden="true")
     .inner
       .group.is-light
-        p.texts このコンテンツは「スダ Advent Calendar2017」5日目のコンテンツです。フリーランスのデザイナーユニット（夫婦）「クラのこ」のクラク・まいのこが制作しています。
-        p.texts スダさんについてはー...あれだ。渋谷のヒカリエでSVGの勉強会があって、埋め込まれたSVGを抜き出す方法がないのか登壇されている方を問い詰めていましたね。懐かしいです。
-        p.texts 「...あの人が噂のスダさんかー」と妙な納得感を覚えた瞬間。
-        p.texts そんなスダさんのアドベントカレンダーがあると聞き、何かできることはないのだろうかと考えました。
-        p.texts やはり、流行り者には流行り物でお応えせねば！
-        p.texts 今年リリースされた「Adobe Character Animator CC」というツールを使い、音声に連動して動くスダさんを作ることに成功しました。今、スダさんが動いていますよね？そういうことです。
-        p.texts これはパペットと言い、カメラでユーザーの声や動きを認識してスダさんを自由に動かすことができます。iPhone Xの「動かせる絵文字」みたいなやつですね。これを使えば、誰でも簡単にスダさんになりきれるでしょう。
-        p.texts スダさんになりきりたい方はAdobe CCでCharacter Animator CCを入れて、このパペットデータを開いてみてください。それではまた。
+        p.texts.is-sm
+          i.fa.fa-clock-o(aria-hidden="true")
+          span.text 2017-12-05
+      .group.is-light
+        p.texts
+          span.text このコンテンツは「
+          a.text.is-link(href="https://adventar.org/calendars/2101") スダ Advent Calendar2017
+          span.text 」5日目のコンテンツです。フリーランスのデザイナーユニット（夫婦）「
+          a.text.is-link(href="https://qranoko.jp") クラのこ
+          span.text 」のクラク・まいのこが制作しています。
+        p.texts
+          span.text スダさんについてはー...あれだ。渋谷のヒカリエでSVGの勉強会があって、埋め込まれたSVGを抜き出す方法がないのか登壇されている方を問い詰めていましたね。懐かしいです。
+        p.texts
+          span.text 「...あの人が噂のスダさんかー」と妙な納得感を覚えた瞬間。
+        p.texts
+          span.text そんなスダさんのアドベントカレンダーがあると聞き、何かできることはないのだろうかと考えました。
+        p.texts
+          span.text やはり、流行り者には流行り物でお応えせねば！
+        p.texts
+          span.text 今年リリースされた「
+          a.text.is-link(href="http://www.adobe.com/jp/products/character-animator.html") Adobe Character Animator CC
+          span.text 」というツールを使い、音声や動きに連動して動くスダさんを作ることに成功しました。今、スダさんが動いていますよね？そういうことです。
+        .group
+          .grid
+            .col.is-mobile-12.is-tablet-6
+              figure
+                img(src="https://i.gyazo.com/c51d408e3550c0adbc69897b44a2fe65.jpg" alt="スダさんの絵を描いている画像")
+                figcaption.texts.is-center.is-sm スダさんを描いて
+            .col.is-mobile-12.is-tablet-6
+              figure
+                img(src="https://i.gyazo.com/c51d408e3550c0adbc69897b44a2fe65.jpg" alt="スダさんの絵を動かしている画像")
+                figcaption.texts.is-center.is-sm スダさんを動かす
+        p.texts
+          span.text これはパペットと言い、カメラでユーザーの声や動きを認識してスダさんを自由に動かすことができます。iPhone Xの「動かせる絵文字」みたいなやつですね。これを使えば、誰でも簡単にスダさんになりきれるでしょう。
+        p.texts
+          span.text スダさんになりきりたい方はAdobe CCでCharacter Animator CCを入れて、このパペットデータを開いてみてください。それではまた。
       .groups
         .btns.is-bar.is-center
           a.btn.is-plain.is-round.is-success(href="/"+path.dist+"/puppet/suda.puppet" download="musubii.min.css")
@@ -53,7 +81,11 @@ block contents
 
   footer.section.is-footer
     .inner
-      .group
+      .btns.is-center
+        a.btn.is-ghost.is-round(href="https://qookie.jp")
+          i.fa.fa-angle-left(aria-hidden="true")
+          span.text ブログも始めました
+      .groups
         .grid.is-center
           .col
             p.text.is-sm.is-light

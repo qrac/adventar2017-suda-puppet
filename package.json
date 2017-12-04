@@ -21,10 +21,13 @@
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-imagemin": "^4.0.0",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sass-glob": "^1.0.8"
+    "gulp-sass-glob": "^1.0.8",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.1"
   }
 }

@@ -5,6 +5,7 @@
 .btn.is-video-btn {
   position: relative;
   //border-radius: 1.25em 0 0 1.25em;
+  box-shadow: 0 2px 20px $light-3;
   @include tablet {
     font-size: 120%;
   }

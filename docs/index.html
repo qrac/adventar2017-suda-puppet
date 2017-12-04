@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>Adventar2017 Suda Puppet - Qrac GitHub</title>
-    <meta name="description" content="Make Suda that responds to the voice.">
+    <meta name="description" content="Make Suda that responds to the voice and motion.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta property="og:title" content="Adventar2017 Suda Puppet">
-    <meta property="og:description" content="Make Suda that responds to the voice.">
+    <meta property="og:description" content="Make Suda that responds to the voice and motion.">
     <meta property="og:url" content="https://qrac.github.io/musubii/index.html">
     <meta property="og:image" content="https://qrac.github.io/musubii/asset/img/ogp.png">
     <meta property="og:site_name" content="Qrac GitHub">
@@ -17,7 +17,7 @@
     <meta name="twitter:site" content="Qrac_JP">
     <meta name="twitter:creator" content="Qrac_JP">
     <meta name="twitter:title" content="Adventar2017 Suda Puppet">
-    <meta name="twitter:description" content="Make Suda that responds to the voice.">
+    <meta name="twitter:description" content="Make Suda that responds to the voice and motion.">
     <meta name="twitter:image:src" content="https://qrac.github.io/musubii/asset/img/ogp.png">
     <link rel="apple-touch-icon" href="/asset/img/apple-touch-icon.png">
     <link rel="shortcut icon" href="/asset/img/favicon.png">
@@ -33,31 +33,48 @@
     </header>
     <section class="section is-topcover">
       <div class="inner">
-        <video class="video is-suda" id="video" width="300" poster="/asset/img/screenshot.png" playsinline>
+        <video class="video is-suda" id="video" width="300" poster="/asset/img/screenshot.png" loop playsinline>
           <source src="/asset/mov/suda-puppet.mp4" type="video/mp4"><a href="/asset/mov/suda-puppet.mp4">動画を再生</a>
         </video>
       </div>
     </section>
-    <section class="section is-control">
-      <input class="trick is-video-btn-trick" id="video-btn-trick" type="checkbox" checked>
-      <div class="btns is-center is-xl">
-        <label class="btn is-plain is-circle is-video-btn" id="video-btn" for="video-btn-trick"><i class="fa fa-pause" aria-hidden="true"></i><i class="fa fa-play" aria-hidden="true"></i></label>
-      </div>
-      <div class="group">
-        <p class="text is-light is-center is-lg"><i class="fa fa-hand-o-down" aria-hidden="true"></i><span class="text">Scroll</span></p>
-      </div>
-    </section>
     <main class="section is-main">
+      <section class="section is-control">
+        <input class="trick is-video-btn-trick" id="video-btn-trick" type="checkbox" checked>
+        <div class="btns is-center is-xl">
+          <label class="btn is-plain is-danger is-circle is-video-btn" id="video-btn" for="video-btn-trick"><i class="fa fa-pause" aria-hidden="true"></i><i class="fa fa-play" aria-hidden="true"></i></label>
+        </div>
+        <div class="group">
+          <p class="text is-light is-center"><i class="fa fa-hand-o-up" aria-hidden="true"></i><span class="text">Play or Scroll</span><i class="fa fa-hand-o-down" aria-hidden="true"></i></p>
+        </div>
+      </section>
       <div class="inner">
         <div class="group is-light">
-          <p class="texts">このコンテンツは「スダ Advent Calendar2017」5日目のコンテンツです。フリーランスのデザイナーユニット（夫婦）「クラのこ」のクラク・まいのこが制作しています。</p>
-          <p class="texts">スダさんについてはー...あれだ。渋谷のヒカリエでSVGの勉強会があって、埋め込まれたSVGを抜き出す方法がないのか登壇されている方を問い詰めていましたね。懐かしいです。</p>
-          <p class="texts">「...あの人が噂のスダさんかー」と妙な納得感を覚えた瞬間。</p>
-          <p class="texts">そんなスダさんのアドベントカレンダーがあると聞き、何かできることはないのだろうかと考えました。</p>
-          <p class="texts">やはり、流行り者には流行り物でお応えせねば！</p>
-          <p class="texts">今年リリースされた「Adobe Character Animator CC」というツールを使い、音声に連動して動くスダさんを作ることに成功しました。今、スダさんが動いていますよね？そういうことです。</p>
-          <p class="texts">これはパペットと言い、カメラでユーザーの声や動きを認識してスダさんを自由に動かすことができます。iPhone Xの「動かせる絵文字」みたいなやつですね。これを使えば、誰でも簡単にスダさんになりきれるでしょう。</p>
-          <p class="texts">スダさんになりきりたい方はAdobe CCでCharacter Animator CCを入れて、このパペットデータを開いてみてください。それではまた。</p>
+          <p class="texts is-sm"><i class="fa fa-clock-o" aria-hidden="true"></i><span class="text">2017-12-05</span></p>
+        </div>
+        <div class="group is-light">
+          <p class="texts"><span class="text">このコンテンツは「</span><a class="text is-link" href="https://adventar.org/calendars/2101">スダ Advent Calendar2017</a><span class="text">」5日目のコンテンツです。フリーランスのデザイナーユニット（夫婦）「</span><a class="text is-link" href="https://qranoko.jp">クラのこ</a><span class="text">」のクラク・まいのこが制作しています。</span></p>
+          <p class="texts"><span class="text">スダさんについてはー...あれだ。渋谷のヒカリエでSVGの勉強会があって、埋め込まれたSVGを抜き出す方法がないのか登壇されている方を問い詰めていましたね。懐かしいです。</span></p>
+          <p class="texts"><span class="text">「...あの人が噂のスダさんかー」と妙な納得感を覚えた瞬間。</span></p>
+          <p class="texts"><span class="text">そんなスダさんのアドベントカレンダーがあると聞き、何かできることはないのだろうかと考えました。</span></p>
+          <p class="texts"><span class="text">やはり、流行り者には流行り物でお応えせねば！</span></p>
+          <p class="texts"><span class="text">今年リリースされた「</span><a class="text is-link" href="http://www.adobe.com/jp/products/character-animator.html">Adobe Character Animator CC</a><span class="text">」というツールを使い、音声や動きに連動して動くスダさんを作ることに成功しました。今、スダさんが動いていますよね？そういうことです。</span></p>
+          <div class="group">
+            <div class="grid">
+              <div class="col is-mobile-12 is-tablet-6">
+                <figure><img src="https://i.gyazo.com/c51d408e3550c0adbc69897b44a2fe65.jpg" alt="スダさんの絵を描いている画像">
+                  <figcaption class="texts is-center is-sm">スダさんを描いて</figcaption>
+                </figure>
+              </div>
+              <div class="col is-mobile-12 is-tablet-6">
+                <figure><img src="https://i.gyazo.com/c51d408e3550c0adbc69897b44a2fe65.jpg" alt="スダさんの絵を動かしている画像">
+                  <figcaption class="texts is-center is-sm">スダさんを動かす</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <p class="texts"><span class="text">これはパペットと言い、カメラでユーザーの声や動きを認識してスダさんを自由に動かすことができます。iPhone Xの「動かせる絵文字」みたいなやつですね。これを使えば、誰でも簡単にスダさんになりきれるでしょう。</span></p>
+          <p class="texts"><span class="text">スダさんになりきりたい方はAdobe CCでCharacter Animator CCを入れて、このパペットデータを開いてみてください。それではまた。</span></p>
         </div>
         <div class="groups">
           <div class="btns is-bar is-center"><a class="btn is-plain is-round is-success" href="/dist/puppet/suda.puppet" download="musubii.min.css"><i class="fa fa-download" aria-hidden="true"></i><span class="text">Download</span></a><a class="btn is-plain is-round is-plain" href="https://github.com/qrac/adventar2017-suda-puppet"><i class="fa fa-github" aria-hidden="true"></i><span class="text">Repository</span></a></div>
@@ -66,7 +83,8 @@
     </main>
     <footer class="section is-footer">
       <div class="inner">
-        <div class="group">
+        <div class="btns is-center"><a class="btn is-ghost is-round" href="https://qookie.jp"><i class="fa fa-angle-left" aria-hidden="true"></i><span class="text">ブログも始めました</span></a></div>
+        <div class="groups">
           <div class="grid is-center">
             <div class="col">
               <p class="text is-sm is-light">License:&nbsp;&nbsp;<i class="fa fa-balance-scale" aria-hidden="true"></i><span class="text">MIT</span></p>
