@@ -184,6 +184,14 @@ button {
   font-size: 7vw;
 }
 
+.obj.is-thumb {
+  width: 100%;
+}
+
+.obj.is-thumb + .texts {
+  margin-top: 0.5em;
+}
+
 .video.is-suda {
   position: absolute;
   top: 50%;
