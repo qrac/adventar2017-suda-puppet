@@ -26,7 +26,7 @@ body > main {
 body {
   position: relative;
   background-color: #000000;
-  font-family: YakuHanJPs, -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, sans-serif;
+  font-family: YakuHanJPs, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans Japanese", Meiryo, "Yu Gothic Medium", sans-serif;
 }
 
 button {
@@ -150,19 +150,19 @@ button {
   }
 }
 
-.btn.is-video-btn > .fa {
+.btn.is-video-btn > .fas {
   position: absolute;
   top: 50%;
   left: 50%;
   margin: 0;
 }
 
-.btn.is-video-btn > .fa.fa-pause {
+.btn.is-video-btn > .fas.fa-pause {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.btn.is-video-btn > .fa.fa-play {
+.btn.is-video-btn > .fas.fa-play {
   -webkit-transform: translate(-36%, -50%);
           transform: translate(-36%, -50%);
 }
@@ -171,11 +171,11 @@ button {
   display: none;
 }
 
-.trick.is-video-btn-trick:not(:checked) + .btns > .btn.is-video-btn > .fa.fa-play {
+.trick.is-video-btn-trick:not(:checked) + .btns > .btn.is-video-btn > .fas.fa-play {
   display: none;
 }
 
-.trick.is-video-btn-trick:checked + .btns > .btn.is-video-btn > .fa.fa-pause {
+.trick.is-video-btn-trick:checked + .btns > .btn.is-video-btn > .fas.fa-pause {
   display: none;
 }
 

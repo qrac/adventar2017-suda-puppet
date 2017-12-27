@@ -15,16 +15,16 @@
   @include wide {
     font-size: 150%;
   }
-  > .fa {
+  > .fas {
     position: absolute;
     top: 50%;
     left: 50%;
     margin: 0;
   }
-  > .fa.fa-pause {
+  > .fas.fa-pause {
     transform: translate(-50%, -50%);
   }
-  > .fa.fa-play {
+  > .fas.fa-play {
     transform: translate(-36%, -50%);
   }
 }
@@ -37,7 +37,7 @@
   //background-color: $yellow-500;
 }
 
-.trick.is-video-btn-trick:not(:checked) + .btns > .btn.is-video-btn > .fa.fa-play {
+.trick.is-video-btn-trick:not(:checked) + .btns > .btn.is-video-btn > .fas.fa-play {
   display: none;
 }
 
@@ -45,6 +45,6 @@
   //background-color: $green-500;
 }
 
-.trick.is-video-btn-trick:checked + .btns > .btn.is-video-btn > .fa.fa-pause {
+.trick.is-video-btn-trick:checked + .btns > .btn.is-video-btn > .fas.fa-pause {
   display: none;
 }
